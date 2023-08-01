@@ -57,3 +57,13 @@ export const Form = styled.form`
         cursor: pointer;
     }
 `;
+export const CenteredRow = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    div {
+        margin: 0px 10px 0px 0px;
+    }
+`;

@@ -4,7 +4,8 @@ import {
     Title,
     Body,
     Link,
-    Form
+    Form,
+    CenteredRow
 } from '../styledComponents'
 import axios from 'axios'
 
@@ -28,10 +29,14 @@ export default function Support() {
     return <Outer>
         <Title>Support</Title>
         <Body>
-            Do you have a question, concern, comment, ransom note or death threat you would like to send me? 
-            Please leave it in the input below with your return email and I will get back to you as quickly as I can!
+            Do you have a support question? Please feel free to send me an email about it! 
+            I will get back to you as quickly as I can.
+            <br/><br/>
+            <CenteredRow>
+                <div>✉️</div> <Link href="mailto:jpkorin@gmail.com">jpkorin@gmail.com</Link>
+            </CenteredRow>
         </Body>
-        <Form onSubmit={e => {
+        {/* <Form onSubmit={e => {
             e.preventDefault();
             sendEmail();
         }}>
@@ -52,6 +57,6 @@ export default function Support() {
             type='submit'>
                 Submit
             </button>
-        </Form>
+        </Form> */}
     </Outer>;
 }
