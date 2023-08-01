@@ -1,6 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
 const game_center_agreement = "https://www.apple.com/legal/privacy/data/en/game-center/#:~:text=Game%20Center%20retains%20the%20information,with%20your%20Game%20Center%20account.&text=We%20collect%20personal%20data%20to,other%20Apple%20apps%20and%20services.";
+import {
+    Outer,
+    Title,
+    Body,
+    Link
+} from '../styledComponents'
 
 export default function Privacy() {
     return <Outer>
@@ -15,28 +20,3 @@ export default function Privacy() {
     </Outer>;
 }
 
-const Outer = styled.div`
-    @import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
-    font-family: "Inter", sans-serif;
-    background: #FAFAFA;
-    min-height: 100vh;
-    color: #333333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px 100px 20px;
-`;
-const Title = styled.div`
-    font-weight: 700;
-    font-size: 24px;
-`;
-const Body = styled.div`
-    max-width: 500px;
-    margin: 20px 0px 0px 0px;
-    font-size: 16px;
-`;
-const Link = styled.a`
-    color: #347EF6;
-    cursor: pointer;
-    text-decoration: underline;
-`;
