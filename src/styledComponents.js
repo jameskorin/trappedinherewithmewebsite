@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Outer = styled.div`
 @import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
 font-family: "Inter", sans-serif;
-background: #FAFAFA;
+background: #FFFFFF;
 min-height: 100vh;
 color: #333333;
 display: flex;
