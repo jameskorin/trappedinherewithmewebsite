@@ -18,6 +18,7 @@ export default function Home() {
       </Head>
       <Image src="/title.png" width="571" height="199"
       style={imageStyle}/>
+      <Body>Play it on <Link href="https://testflight.apple.com/join/dlP4J2Nh">TestFlight</Link> now!</Body>
       <Body>Coming to the iOS App Store soon</Body>
       <Body>Game by <Link href='https://jameskor.in'>James Korin</Link></Body>
       <Body>Music and sound by <Link href='https://www.instagram.com/actionsmackson/'>Jackson Roe</Link></Body>
