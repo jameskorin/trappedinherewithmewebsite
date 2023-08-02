@@ -1,29 +1,36 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Outer = styled.div`
-@import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
-font-family: "Inter", sans-serif;
-background: #FFFFFF;
-min-height: 100vh;
-color: #333333;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 40px 20px 100px 20px;
+    @import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
+    font-family: "Inter", sans-serif;
+    background: #FFFFFF;
+    min-height: 100vh;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 100px 20px;
 `;
 export const Title = styled.div`
-font-weight: 700;
-font-size: 24px;
+    font-weight: 700;
+    font-size: 24px;
 `;
 export const Body = styled.div`
-max-width: 500px;
-margin: 20px 0px 0px 0px;
-font-size: 16px;
+    max-width: 500px;
+    margin: 20px 0px 0px 0px;
+    font-size: 16px;
+    z-index: 10;
+
+    ${props => props.bg && css`
+        background: #FFFFFF;
+        border-radius: 100px;
+        padding: 3px 15px;
+    `}
 `;
 export const Link = styled.a`
-color: #347EF6;
-cursor: pointer;
-text-decoration: underline;
+    color: #347EF6;
+    cursor: pointer;
+    text-decoration: underline;
 `;
 export const Form = styled.form`
     display: flex;
@@ -66,4 +73,22 @@ export const CenteredRow = styled.div`
     div {
         margin: 0px 10px 0px 0px;
     }
+`;
+export const CTA = styled.a`
+    font-size: 24px;
+    background: #347ef6;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border-radius: 100px;
+    cursor: pointer;
+    z-index: 10;
+    margin: -20px 0px 0px 0px;
+`;
+export const BGContainer = styled.div`
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0px 0px 0px;
 `;
