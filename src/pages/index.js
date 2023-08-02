@@ -25,7 +25,7 @@ export default function Home() {
       <BGContainer>
 
         {/* Gameplay */}
-        <BGVideo playsinline autoplay autoPlay muted loop>
+        <BGVideo playsInline autoPlay muted loop>
           <source src="/bg_gameplay_1.mp4" />
         </BGVideo>
 

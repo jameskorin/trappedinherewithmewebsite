@@ -98,6 +98,6 @@ export const BGVideo = styled.video`
     max-width: min(571px, 100vw);
     aspectRatio: auto 1 / 1;
     height: auto;
-    zIndex: 1;
-    objectFit: cover;
+    z-index: 1;
+    object-fit: cover;
 `;
