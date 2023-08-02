@@ -24,7 +24,9 @@ export default function Home() {
       <BGContainer>
 
         {/* Gameplay */}
-        <Image src="/gameplay_still.png" width="607" height="606" style={bgStyle}/>
+        <video autoPlay loop muted style={bgStyle}>
+          <source src="/bg_gameplay_1.mp4" />
+        </video>
 
         {/* CTA for beta download */}
         <CTA href="https://testflight.apple.com/join/dlP4J2Nh">Play the beta now!</CTA>
@@ -34,7 +36,7 @@ export default function Home() {
         <Body bg>Music and sound by <Link href='https://www.instagram.com/actionsmackson/'>Jackson Roe</Link></Body>
         <Body bg>UI animations by <Link href='https://www.davidleefiddler.com/'>D1337</Link></Body>
         <Body bg>Arcade cabinet by <Link href='https://www.linkedin.com/in/jonbblair/'>Jonathan Blair</Link></Body>
-        
+
       </BGContainer>
     </Outer>
   )
@@ -50,11 +52,10 @@ const imageStyle = {
 }
 
 const bgStyle = {
-  width: '607px', 
+  width: '1080px', 
   position: 'absolute',
-  maxWidth: 'min(500px, calc(100vw - 20px))',
-  aspectRatio: 'auto 607 / 606',
+  maxWidth: 'min(1080px, calc(100vw + 80px))',
+  aspectRatio: 'auto 1 / 1',
   height: 'auto',
   zIndex: '1',
-  
 }
