@@ -9,6 +9,7 @@ import {
   BGVideo
 } from '../styledComponents'
 import Image from 'next/image'
+import MuxPlayer from '@mux/mux-player-react'
 
 export default function Home() {
   return (
@@ -25,9 +26,19 @@ export default function Home() {
       <BGContainer>
 
         {/* Gameplay */}
-        <BGVideo playsInline autoPlay muted loop>
-          <source src="/bg_gameplay_1.mp4" />
-        </BGVideo>
+        <MuxPlayer streamType="on-demand"
+        muted
+        autoPlay="muted"
+        loop
+        playbackId="INOrTjGATiaMvXWRcPmkOLM01TrDNrCj7d9WpEKVfP4s"
+        style={{
+          position: 'absolute',
+          maxWidth: 'min(571px, 100vw)',
+          aspectRatio: 'auto 1 / 1',
+          height: 'auto',
+          zIndex: '1',
+          objectFit: 'cover'
+        }}/>
 
         {/* CTA for beta download */}
         <CTA href="https://testflight.apple.com/join/dlP4J2Nh">Play the beta now!</CTA>

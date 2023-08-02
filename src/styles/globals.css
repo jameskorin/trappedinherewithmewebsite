@@ -105,3 +105,8 @@ a {
     color-scheme: dark;
   }
 }
+
+
+mux-player {
+  --controls: none;
+}
