@@ -136,10 +136,15 @@ mux-player {
   --time-display: none;
   --duration-display: none;
   --media-background-color: rgba(0,0,0,0);
+  --media-loading-indicator: none;
 
   /* Target a specific section by prefixing the CSS var with (top|center|bottom) */
   --center-controls: none;
   --bottom-play-button: none;
+}
+
+mux-video {
+  display: none !important;
 }
 
 media-controller {
@@ -147,4 +152,20 @@ media-controller {
   color: transparent !important;
   display: none !important;
   opacity: 0 !important;
+  --media-background-color: rgba(0,0,0,0);
+}
+media-loading-indicator {
+  background: transparent !important;
+  color: transparent !important;
+  display: none !important;
+  opacity: 0 !important;
+  --media-background-color: rgba(0,0,0,0);
+}
+
+media-theme {
+  display: none !important;
+}
+
+mxp-dialog {
+  display: none !important;
 }

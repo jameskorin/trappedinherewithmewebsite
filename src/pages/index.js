@@ -51,7 +51,7 @@ export default function Home() {
             height="auto"
           /> */}
 
-        {/* <FadeIn/> */}
+        <FadeIn/>
 
         {/* CTA for beta download */}
         <CTA href="https://testflight.apple.com/join/dlP4J2Nh">Play the beta now!</CTA>
