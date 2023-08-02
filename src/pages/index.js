@@ -24,7 +24,16 @@ export default function Home() {
       <BGContainer>
 
         {/* Gameplay */}
-        <video autoPlay loop muted style={bgStyle}>
+        {/* <div dangerouslySetInnerHTML={{ __html: `
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          src="/bg_gameplay_1.mp4"
+        />,
+      ` }}></div> */}
+        <video autoPlay loop muted playsinline style={bgStyle}>
           <source src="/bg_gameplay_1.mp4" />
         </video>
 
