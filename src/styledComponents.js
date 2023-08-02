@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
 export const Outer = styled.div`
     @import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
@@ -100,4 +100,26 @@ export const BGVideo = styled.video`
     height: auto;
     z-index: 1;
     object-fit: cover;
+`;
+export const FadeIn = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    background: #FFFFFF;
+    opacity: 0;
+    animation: fadein 1s linear;
+    @keyframes fadein {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
 `;

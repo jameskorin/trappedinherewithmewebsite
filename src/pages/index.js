@@ -6,7 +6,8 @@ import {
   Link,
   CTA,
   BGContainer,
-  BGVideo
+  BGVideo,
+  FadeIn
 } from '../styledComponents'
 import Image from 'next/image'
 import MuxPlayer from '@mux/mux-player-react'
@@ -39,6 +40,8 @@ export default function Home() {
           zIndex: '1',
           objectFit: 'cover'
         }}/>
+
+        <FadeIn/>
 
         {/* CTA for beta download */}
         <CTA href="https://testflight.apple.com/join/dlP4J2Nh">Play the beta now!</CTA>
