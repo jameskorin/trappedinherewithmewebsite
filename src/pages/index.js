@@ -2,15 +2,12 @@ import Head from 'next/head'
 import {
   Outer, 
   Body,
-  Title,
   Link,
   CTA,
   BGContainer,
-  BGVideo,
   FadeIn
 } from '../styledComponents'
 import Image from 'next/image'
-// import ReactHlsPlayer from 'react-hls-player'
 import MuxPlayer from '@mux/mux-player-react'
 
 export default function Home() {
@@ -43,14 +40,10 @@ export default function Home() {
           objectFit: 'cover'
         }}/>
 
-        {/* <ReactHlsPlayer
-            src="https://stream.mux.com/INOrTjGATiaMvXWRcPmkOLM01TrDNrCj7d9WpEKVfP4s.m3u8"
-            autoPlay={false}
-            controls={true}
-            width="100%"
-            height="auto"
-          /> */}
-
+        {/* 
+          White background over the video that fades in after a second. 
+          This obscures first frame wonkiness with the video player that I failed to fix with css.
+        */}
         <FadeIn/>
 
         {/* CTA for beta download */}
