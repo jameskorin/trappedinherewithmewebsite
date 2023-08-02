@@ -22,7 +22,7 @@ export default function Home() {
       <Body>Coming to the iOS App Store soon</Body>
       <Body>Game by <Link href='https://jameskor.in'>James Korin</Link></Body>
       <Body>Music and sound by <Link href='https://www.instagram.com/actionsmackson/'>Jackson Roe</Link></Body>
-      <Body>UI animations by <Link href='https://www.davidleefiddler.com/'>Davia Lee Fiddler</Link></Body>
+      <Body>UI animations by <Link href='https://www.davidleefiddler.com/'>D1337</Link></Body>
       <Body>Arcade cabinet by <Link href='https://www.linkedin.com/in/jonbblair/'>Jonathan Blair</Link></Body>
     </Outer>
   )
