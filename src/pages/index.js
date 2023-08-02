@@ -63,7 +63,7 @@ const imageStyle = {
 const bgStyle = {
   width: '1080px', 
   position: 'absolute',
-  maxWidth: 'min(1080px, calc(100vw + 80px))',
+  maxWidth: 'min(1080px, 100vw)',
   aspectRatio: 'auto 1 / 1',
   height: 'auto',
   zIndex: '1',
