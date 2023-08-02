@@ -33,7 +33,7 @@ export default function Home() {
           src="/bg_gameplay_1.mp4"
         />,
       ` }}></div> */}
-        <video playsinline autoPlay autoplay muted loop style={bgStyle}>
+        <video playsinline autoplay autoPlay muted loop style={bgStyle}>
           <source src="/bg_gameplay_1.mp4" />
         </video>
 
