@@ -135,8 +135,16 @@ mux-player {
   --time-range: none;
   --time-display: none;
   --duration-display: none;
+  --media-background-color: rgba(0,0,0,0);
 
   /* Target a specific section by prefixing the CSS var with (top|center|bottom) */
   --center-controls: none;
   --bottom-play-button: none;
+}
+
+media-controller {
+  background: transparent !important;
+  color: transparent !important;
+  display: none !important;
+  opacity: 0 !important;
 }

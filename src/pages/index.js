@@ -10,6 +10,7 @@ import {
   FadeIn
 } from '../styledComponents'
 import Image from 'next/image'
+// import ReactHlsPlayer from 'react-hls-player'
 import MuxPlayer from '@mux/mux-player-react'
 
 export default function Home() {
@@ -27,7 +28,8 @@ export default function Home() {
       <BGContainer>
 
         {/* Gameplay */}
-        <MuxPlayer streamType="on-demand"
+        <MuxPlayer 
+        streamType="on-demand"
         muted
         autoPlay="muted"
         loop
@@ -41,7 +43,15 @@ export default function Home() {
           objectFit: 'cover'
         }}/>
 
-        <FadeIn/>
+        {/* <ReactHlsPlayer
+            src="https://stream.mux.com/INOrTjGATiaMvXWRcPmkOLM01TrDNrCj7d9WpEKVfP4s.m3u8"
+            autoPlay={false}
+            controls={true}
+            width="100%"
+            height="auto"
+          /> */}
+
+        {/* <FadeIn/> */}
 
         {/* CTA for beta download */}
         <CTA href="https://testflight.apple.com/join/dlP4J2Nh">Play the beta now!</CTA>
