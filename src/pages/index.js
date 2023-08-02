@@ -5,7 +5,8 @@ import {
   Title,
   Link,
   CTA,
-  BGContainer
+  BGContainer,
+  BGVideo
 } from '../styledComponents'
 import Image from 'next/image'
 
@@ -24,18 +25,9 @@ export default function Home() {
       <BGContainer>
 
         {/* Gameplay */}
-        {/* <div dangerouslySetInnerHTML={{ __html: `
-        <video
-          loop
-          muted
-          autoplay
-          playsinline
-          src="/bg_gameplay_1.mp4"
-        />,
-      ` }}></div> */}
-        <video playsinline autoplay autoPlay muted loop style={bgStyle}>
+        <BGVideo playsinline autoplay autoPlay muted loop>
           <source src="/bg_gameplay_1.mp4" />
-        </video>
+        </BGVideo>
 
         {/* CTA for beta download */}
         <CTA href="https://testflight.apple.com/join/dlP4J2Nh">Play the beta now!</CTA>
@@ -58,14 +50,4 @@ const imageStyle = {
   height: 'auto',
   margin: '0px 0px 0px -5px',
   zIndex: '10'
-}
-
-const bgStyle = {
-  width: '1080px', 
-  position: 'absolute',
-  maxWidth: 'min(1080px, 100vw)',
-  aspectRatio: 'auto 1 / 1',
-  height: 'auto',
-  zIndex: '1',
-  objectFit: 'cover'
 }

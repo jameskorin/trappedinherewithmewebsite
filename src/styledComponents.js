@@ -86,9 +86,18 @@ export const CTA = styled.a`
 `;
 export const BGContainer = styled.div`
     width: 100vw;
+    height: 100vw;
+    max-height: 571px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 80px 0px 0px 0px;
+`;
+export const BGVideo = styled.video`
+    position: absolute;
+    max-width: min(571px, 100vw);
+    aspectRatio: auto 1 / 1;
+    height: auto;
+    zIndex: 1;
+    objectFit: cover;
 `;
