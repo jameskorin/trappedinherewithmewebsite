@@ -67,4 +67,5 @@ const bgStyle = {
   aspectRatio: 'auto 1 / 1',
   height: 'auto',
   zIndex: '1',
+  objectFit: 'cover'
 }
