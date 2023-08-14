@@ -17,11 +17,11 @@ export default async function handler(req, res) {
 
     const r = await pool.query(`
         WITH ranked_scores AS (
-            SELECT *,
+            SELECT high_score, username, steam_id,
                 ROW_NUMBER() OVER (ORDER BY high_score DESC) AS rank
             FROM scores
         )
-        SELECT *
+        SELECT high_score, username, steam_id
         FROM ranked_scores
         WHERE rank BETWEEN (SELECT rank FROM ranked_scores WHERE steam_id = '${steam_id}') - 5
         AND (SELECT rank FROM ranked_scores WHERE steam_id = '${steam_id}') + 5;
