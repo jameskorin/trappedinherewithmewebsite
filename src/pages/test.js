@@ -12,16 +12,16 @@ export default function Test() {
     const submitScore = async () => {
         if(called) return null;
         setCalled(true);
-        const r = await axios.post('/api/submitScore', {
-            steam_id: 'fweiwefi',
-            score: 32,
-            username: 'knoland'
-        });
-        const d = await axios.post('/api/getRank', {
-            steam_id: 'fweiwefi'
+        // const r = await axios.post('/api/submitScore', {
+        //     steam_id: 'fweiwefi',
+        //     score: 32,
+        //     username: 'knoland'
+        // });
+        const r = await axios.post('/api/getRank', {
+            steam_id: 'def456'
         });
         console.log(r.data);
-        console.log(d.data);
+        // console.log(d.data);
     }
 
     return null;

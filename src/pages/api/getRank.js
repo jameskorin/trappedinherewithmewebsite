@@ -1,7 +1,6 @@
-import { Pool } from 'pg'
+// Gets the user's row, rank, and the 5 above and below the user
 
-// import { createClient } from '@supabase/supabase-js'
-// const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY);
+import { Pool } from 'pg'
 
 const postgres = {
   user: 'postgres',
@@ -17,12 +16,23 @@ export default async function handler(req, res) {
     const pool = new Pool(postgres);
 
     const r = await pool.query(`
-        SELECT COUNT(*) + 1 AS rank
-        FROM scores
-        WHERE high_score > (SELECT high_score FROM scores WHERE steam_id = '${steam_id}');
+        WITH ranked_scores AS (
+            SELECT *,
+                ROW_NUMBER() OVER (ORDER BY high_score DESC) AS rank
+            FROM scores
+        )
+        SELECT *
+        FROM ranked_scores
+        WHERE rank BETWEEN (SELECT rank FROM ranked_scores WHERE steam_id = '${steam_id}') - 5
+        AND (SELECT rank FROM ranked_scores WHERE steam_id = '${steam_id}') + 5;
+    
     `);
     console.log(r.rows);
 
     return res.send('done');
+
+
+
+    
 
 }
