@@ -29,10 +29,5 @@ export default async function handler(req, res) {
     `);
     console.log(r.rows);
 
-    return res.send('done');
-
-
-
-    
-
+    return res.send({rows: r.rows});
 }
