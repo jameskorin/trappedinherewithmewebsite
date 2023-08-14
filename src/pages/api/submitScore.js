@@ -12,7 +12,9 @@ const postgres = {
 
 export default async function handler(req, res) {
     const { score, steam_id, username } = req.body;
-    console.log({score: score, steam_id: steam_id, username: username});
+    const new_score = parseInt(score);
+    console.log({score: new_score, steam_id: steam_id, username: username});
+    
 
     const pool = new Pool(postgres);
 
@@ -27,7 +29,7 @@ export default async function handler(req, res) {
     if(r.rows.length === 0) {
         await pool.query(`
             INSERT INTO scores (steam_id, high_score, username, high_score_time)
-            VALUES ('${steam_id}', ${score}, '${username}', to_timestamp(${Date.now()} / 1000.0));        
+            VALUES ('${steam_id}', ${new_score}, '${username}', to_timestamp(${Date.now()} / 1000.0));        
         `);
         return res.send('new row');
     }
@@ -36,10 +38,10 @@ export default async function handler(req, res) {
     // If their username is updated, update that as well
     const old_score = (r.rows[0].high_score);
     const old_name = r.rows[0].username;
-    if(score > old_score || old_name !== username) {
+    if(new_score > old_score || old_name !== username) {
         await pool.query(`
             UPDATE scores
-            SET high_score = ${Math.max(old_score, score)}, username = '${username}' ${score > old_score ? `, high_score_time = to_timestamp(${Date.now()} / 1000.0)`:``}
+            SET high_score = ${Math.max(old_score, new_score)}, username = '${username}' ${new_score > old_score ? `, high_score_time = to_timestamp(${Date.now()} / 1000.0)`:``}
             WHERE steam_id = '${steam_id}';        
         `);
     }
