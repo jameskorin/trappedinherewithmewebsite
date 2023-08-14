@@ -13,6 +13,7 @@ const postgres = {
 
 export default async function handler(req, res) {
     const { score, steam_id, username } = req.body;
+    console.log({score: score, steam_id: steam_id, username: username});
 
     const pool = new Pool(postgres);
 
