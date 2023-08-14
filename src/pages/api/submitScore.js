@@ -1,8 +1,5 @@
 import { Pool } from 'pg'
 
-// import { createClient } from '@supabase/supabase-js'
-// const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY);
-
 const postgres = {
   user: 'postgres',
   host: 'db.ufzkwbydugnwpjwnjpdn.supabase.co',
@@ -40,9 +37,5 @@ export default async function handler(req, res) {
             WHERE steam_id = '${steam_id}';        
         `);
     }
-
     return res.send('done');
-
 }
-
-// Game client sends new score, steam id of user
