@@ -17,6 +17,10 @@ export default async function handler(req, res) {
     // Get the user's current high score
     const r = await pool.query(`SELECT * FROM scores WHERE steam_id = '${steam_id}';`);
 
+    if (r.rows.length > 1) {
+        console.log('hey');
+    }
+
     // If there is no row for this user, create one and return
     if(r.rows.length === 0) {
         await pool.query(`
