@@ -21,6 +21,9 @@ export default function Test() {
             steam_id: 'def456'
         });
         console.log(r.data);
+
+        // const d = await axios.get('/api/populateTestData');
+        // console.log(d.data);
         // console.log(d.data);
     }
 
