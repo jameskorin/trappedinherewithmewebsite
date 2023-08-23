@@ -16,10 +16,12 @@ export const Title = styled.div`
     font-size: 24px;
 `;
 export const Body = styled.div`
+    min-width: 270px;
     max-width: 500px;
     margin: 20px 0px 0px 0px;
     font-size: 16px;
     z-index: 10;
+    text-align: center;
 
     ${props => props.bg && css`
         background: #FFFFFF;
@@ -83,6 +85,8 @@ export const CTA = styled.a`
     cursor: pointer;
     z-index: 10;
     margin: -20px 0px 0px 0px;
+    min-width: 270px;
+    text-align: center;
 `;
 export const BGContainer = styled.div`
     width: 100vw;

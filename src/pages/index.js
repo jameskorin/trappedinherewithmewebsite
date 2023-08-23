@@ -17,6 +17,7 @@ export default function Home() {
         <title>TRAPPED IN HERE WITH ME</title>
         <meta name="description" content="TRAPPED IN HERE WITH ME - developed by James Korin" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="apple-itunes-app" content="app-id=6449551613"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Image src="/title.png" width="571" height="199"
