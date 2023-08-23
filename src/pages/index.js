@@ -47,7 +47,7 @@ export default function Home() {
         <FadeIn/>
 
         {/* CTA for beta download */}
-        <CTA href="https://testflight.apple.com/join/dlP4J2Nh">Play the beta now!</CTA>
+        <CTA href="https://apps.apple.com/us/app/trapped-in-here-with-me/id6449551613">Play on iOS!</CTA>
 
         {/* Credits */}
         <Body bg>Game by <Link href='https://jameskor.in'>James Korin</Link></Body>
