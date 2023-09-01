@@ -16,6 +16,8 @@ export default async function handler(req, res) {
     const new_score = parseInt(score);
     console.log({score: new_score, steam_id: steam_id, username: username, token: token});
 
+    console.log(process.env.STEAM_PUBLISHER_KEY);
+
     // Validate session
     const path = 'https://partner.steam-api.com/ISteamUserAuth/AuthenticateUserTicket/v1/';
     const v = await axios.get(path, { 
