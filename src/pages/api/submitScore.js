@@ -1,6 +1,7 @@
 import { Pool } from 'pg'
 import dotenv from 'dotenv'
 dotenv.config();
+import axios from 'axios'
 
 const postgres = {
   user: 'postgres',
@@ -14,6 +15,18 @@ export default async function handler(req, res) {
     const { score, steam_id, username, token } = req.body;
     const new_score = parseInt(score);
     console.log({score: new_score, steam_id: steam_id, username: username, token: token});
+
+    // Validate session
+    const path = 'https://partner.steam-api.com/ISteamUserAuth/AuthenticateUserTicket/v1/';
+    const v = await axios.get(path, { 
+        params: {
+            key: process.env.STEAM_PUBLISHER_KEY,
+            appid: 2584310,
+            ticket: token,
+            identity: ''
+        }
+    });
+    console.log(v);
     
 
     const pool = new Pool(postgres);
