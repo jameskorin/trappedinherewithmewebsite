@@ -13,7 +13,7 @@ const postgres = {
 export default async function handler(req, res) {
     const { score, steam_id, username } = req.body;
     const new_score = parseInt(score);
-    console.log({score: new_score, steam_id: steam_id, username: username});
+    console.log({score: new_score, steam_id: steam_id, username: username, token: token});
     
 
     const pool = new Pool(postgres);
