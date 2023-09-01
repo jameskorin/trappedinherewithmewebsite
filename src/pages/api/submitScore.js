@@ -16,8 +16,6 @@ export default async function handler(req, res) {
     const new_score = parseInt(score);
     console.log({score: new_score, steam_id: steam_id, username: username, token: token});
 
-    console.log(process.env.STEAM_PUBLISHER_KEY);
-
     // Validate session
     const path = 'https://partner.steam-api.com/ISteamUserAuth/AuthenticateUserTicket/v1/';
     const v = await axios.get(path, { 
@@ -28,8 +26,14 @@ export default async function handler(req, res) {
             identity: 'gameclient'
         }
     });
-    console.log(v.data.response);
-    
+    const id = v.data.response.params.steamid
+    console.log(id);
+
+    if(steam_id !== id) {
+        return res.status(400).send({error: 'invalid auth session'});
+    } else {
+        console.log('id matches ticket');
+    }
 
     const pool = new Pool(postgres);
 
