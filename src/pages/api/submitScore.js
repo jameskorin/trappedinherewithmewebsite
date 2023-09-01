@@ -28,7 +28,7 @@ export default async function handler(req, res) {
             identity: 'gameclient'
         }
     });
-    console.log(v);
+    console.log(v.data.response);
     
 
     const pool = new Pool(postgres);
