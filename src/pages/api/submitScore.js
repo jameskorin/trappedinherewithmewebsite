@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     const path = 'https://partner.steam-api.com/ISteamUserAuth/AuthenticateUserTicket/v1/';
     const v = await axios.get(path, { 
         params: {
-            key: process.env.STEAM_PUBLISHER_KEY,
+            key: "F3A995C29FBE9EAA5618C740E8E002E3",
             appid: 2584310,
             ticket: token,
             identity: 'gameclient'
