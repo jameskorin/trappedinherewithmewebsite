@@ -23,7 +23,7 @@ export default async function handler(req, res) {
             key: process.env.STEAM_PUBLISHER_KEY,
             appid: 2584310,
             ticket: token,
-            identity: ''
+            identity: 'gameclient'
         }
     });
     console.log(v);
