@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/server'
  
-export const runtime = 'edge'
+export const runtime = 'experimental-edge'
  
 export const alt = 'Trapped In Here With Me'
 export const size = {
