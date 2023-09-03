@@ -9,13 +9,6 @@ export default function Share() {
     // Serve an image of that server rendered page as the preview for the page
 
     return <Outer>
-        <Head>
-            <meta property="og:image" content="<generated>" />
-            <meta property="og:image:alt" content={`I scored ${10} in Trapped In Here With Me`} />
-            <meta property="og:image:type" content="image/png" />
-            <meta property="og:image:width" content="1200" />
-            <meta property="og:image:height" content="630" />
-        </Head>
         <Score>{10}</Score>
     </Outer>;
 }
