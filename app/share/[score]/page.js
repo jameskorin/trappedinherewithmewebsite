@@ -1,11 +1,8 @@
 'use client'
 import React from 'react'
 import UI from './ui'
+import { Decode } from './scoreCoding'
 
 export default function Share({ params }) {
-    // Get the score from the query param
-    // Render a page displaying the score
-    // Serve an image of that server rendered page as the preview for the page
-
-    return <UI score={params.score}/>;
+    return <UI score={Decode(params.score)}/>;
 }

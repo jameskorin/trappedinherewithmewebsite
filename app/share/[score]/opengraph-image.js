@@ -1,10 +1,11 @@
 import { ImageResponse } from 'next/server'
- 
+import { Decode } from './scoreCoding' 
+
 // Route segment config
 export const runtime = 'edge'
  
 // Image metadata
-export const alt = 'About Acme'
+export const alt = 'Trapped In Here With Me'
 export const size = {
   width: 1200,
   height: 630,
@@ -30,7 +31,7 @@ export default async function Image({ params }) {
           justifyContent: 'center',
         }}
       >
-        {params.score}
+        {Decode(params.score)}
       </div>
     ),
     // ImageResponse options
