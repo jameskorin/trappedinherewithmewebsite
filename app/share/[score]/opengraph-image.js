@@ -1,5 +1,4 @@
 import { ImageResponse } from 'next/server'
-import UI from './ui'
  
 // Route segment config
 export const runtime = 'edge'
@@ -14,13 +13,25 @@ export const size = {
 export const contentType = 'image/png'
  
 // Image generation
-export default async function Image() {
+export default async function Image({ params }) {
   
- 
   return new ImageResponse(
     (
       // ImageResponse JSX element
-      <UI score={10}/>
+      <div
+        style={{
+          fontSize: 128,
+          background: '#333333',
+          color: '#FFFFFF',
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        {params.score}
+      </div>
     ),
     // ImageResponse options
     {
