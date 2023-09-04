@@ -23,6 +23,7 @@ const Score = styled.div`
     font-size: 96px;
     width: 100%;
     text-align: center;
+    font-family: video-bold;
 `;
 
 const GradientCircle = styled.div`

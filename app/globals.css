@@ -169,3 +169,16 @@ media-theme {
 mxp-dialog {
   display: none !important;
 }
+
+@font-face {
+  font-family: 'video-bold';
+  src: url('/fonts/Video-Bold.ttf');
+}
+@font-face {
+  font-family: 'video-light';
+  src: url('/fonts/Video-Light.ttf');
+}
+@font-face {
+  font-family: 'video-cond-bold';
+  src: url('/fonts/VideoCond-Bold.ttf');
+}
