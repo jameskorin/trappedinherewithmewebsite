@@ -65,8 +65,8 @@ const outer = {
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'flex-start',
-  justifyContent: 'center',
+  alignItems: 'center',
+  justifyContent: 'flex-start',
   textAlign: 'center'
 };
 const content = {
