@@ -67,6 +67,15 @@ const outer = {
   justifyContent: 'flex-start',
   textAlign: 'center'
 };
+const gradientCircle = {
+  position: 'absolute',
+  left: '-150px',
+  top: '383px',
+  width: '1500px',
+  height: '1500px',
+  borderRadius: '1500px',
+  background: 'linear-gradient(90deg, #8A2387 14.27%, #E94057 48.78%, #F27121 86.52%)'
+};
 const headline = {
   position: 'absolute',
   left: 0,
@@ -74,6 +83,7 @@ const headline = {
   marginLeft: 'auto', 
   marginRight: 'auto', 
   width: '1200px',
+  minWidth: '1200px',
   top: '22px',
   fontSize: '48px',
   fontFamily: 'VideoLight',
@@ -86,19 +96,11 @@ const score = {
   marginLeft: 'auto', 
   marginRight: 'auto', 
   width: '1200px',
+  minWidth: '1200px',
   top: '45px',
   fontSize: '300px',
   fontFamily: 'VideoBold',
   textAlign: 'center'
-};
-const gradientCircle = {
-  position: 'absolute',
-  left: '-150px',
-  top: '383px',
-  width: '1500px',
-  height: '1500px',
-  borderRadius: '1500px',
-  background: 'linear-gradient(90deg, #8A2387 14.27%, #E94057 48.78%, #F27121 86.52%)'
 };
 const cta = {
   position: 'absolute',
@@ -107,6 +109,7 @@ const cta = {
   marginLeft: 'auto', 
   marginRight: 'auto', 
   width: '1200px',
+  minWidth: '1200px',
   bottom: '55px',
   fontSize: '80px',
   fontFamily: 'VideoLight',
