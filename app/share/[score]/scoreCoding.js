@@ -1,4 +1,4 @@
-const layers = 1;
+const layers = 4;
 
 export function Encode(score) {
     let code = score;
