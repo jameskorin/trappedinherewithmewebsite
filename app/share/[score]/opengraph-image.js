@@ -82,6 +82,7 @@ const headline = {
   fontFamily: 'VideoLight'
 }
 const score = {
+  marginTop: '-20px',
   fontSize: '300px',
   fontFamily: 'VideoBold',
 };
