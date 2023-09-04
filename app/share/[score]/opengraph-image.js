@@ -27,11 +27,15 @@ export default async function Image({ params }) {
           width: '100%',
           height: '100%',
           display: 'flex',
-          alignItems: 'center',
           justifyContent: 'center',
         }}
       >
-        {Decode(params.score)}
+        <div
+        style={{
+          fontWeight: 700,
+          marginTop: '40px'
+        }}
+        >{Decode(params.score)}</div>
         <div
         style={{
           position: 'absolute',
