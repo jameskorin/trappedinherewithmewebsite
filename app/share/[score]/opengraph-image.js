@@ -65,7 +65,7 @@ const outer = {
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center',
+  alignItems: 'flex-start',
   justifyContent: 'center',
   textAlign: 'center'
 };
@@ -75,7 +75,7 @@ const content = {
   justifyContent: 'center',
   alignItems: 'center',
   textAlign:'center',
-  paddingTop: '0px'
+  paddingTop: '20px'
 };
 const headline = {
   fontSize: '48px',
