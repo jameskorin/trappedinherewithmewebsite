@@ -16,9 +16,12 @@ export const contentType = 'image/png'
 // Image generation
 export default async function Image({ params }) {
   
-  const videoBold = await fetch(
-    new URL('@/public/fonts/Video-Bold.ttf', import.meta.url)
-  ).then((res) => res.arrayBuffer());
+const videoBold = await fetch(
+  new URL('@/public/fonts/Video-Bold.ttf', import.meta.url)
+).then((res) => res.arrayBuffer());
+const videoLight = await fetch(
+  new URL('@/public/fonts/Video-Light.ttf', import.meta.url)
+).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
     (
@@ -34,13 +37,15 @@ export default async function Image({ params }) {
           justifyContent: 'center',
         }}
       >
+        <div style={headline}>I scored</div>
         <div
         style={{
           fontWeight: 700,
-          marginTop: '60px',
+          marginTop: '20px',
           fontFamily: 'VideoBold'
         }}
         >{Decode(params.score)}</div>
+        <div style={headline}>Can you beat that?</div>
         <div
         style={{
           position: 'absolute',
@@ -65,7 +70,20 @@ export default async function Image({ params }) {
           style: "normal",
           weight: 700,
         },
+        {
+          name: "VideoLight",
+          data: videoLight,
+          style: "normal",
+          weight: 700,
+        },
       ],
     }
   )
+}
+
+const headline = {
+  marginTop: '20px',
+  fontSize: '24px',
+  textAlign: 'center',
+  fontFamily: 'VideoLight'
 }
