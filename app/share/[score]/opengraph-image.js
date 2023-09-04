@@ -33,7 +33,7 @@ export default async function Image({ params }) {
         <div
         style={{
           fontWeight: 700,
-          marginTop: '40px'
+          marginTop: '60px'
         }}
         >{Decode(params.score)}</div>
         <div
