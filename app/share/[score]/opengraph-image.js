@@ -1,6 +1,5 @@
 import { ImageResponse } from 'next/server'
 import { Decode } from './scoreCoding' 
-import '@/app/globals.css'
 
 // Route segment config
 export const runtime = 'edge'
@@ -17,6 +16,10 @@ export const contentType = 'image/png'
 // Image generation
 export default async function Image({ params }) {
   
+  const videoBold = await fetch(
+    new URL('@/public/fonts/Video-Bold.ttf', import.meta.url)
+  ).then((res) => res.arrayBuffer());
+
   return new ImageResponse(
     (
       // ImageResponse JSX element
@@ -35,7 +38,7 @@ export default async function Image({ params }) {
         style={{
           fontWeight: 700,
           marginTop: '60px',
-          fontFamily: 'video-bold'
+          fontFamily: 'VideoBold'
         }}
         >{Decode(params.score)}</div>
         <div
@@ -55,6 +58,14 @@ export default async function Image({ params }) {
       // For convenience, we can re-use the exported opengraph-image
       // size config to also set the ImageResponse's width and height.
       ...size,
+      fonts: [
+        {
+          name: "VideoBold",
+          data: videoBold,
+          style: "normal",
+          weight: 700,
+        },
+      ],
     }
   )
 }
