@@ -70,7 +70,7 @@ const content = {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  paddingTop: '64px'
+  paddingTop: '0px'
 };
 const headline = {
   fontSize: '48px',
@@ -78,13 +78,12 @@ const headline = {
   fontFamily: 'VideoLight'
 }
 const score = {
-  fonstSize: '128px',
-  marginTop: '20px',
+  fontSize: '128px',
   fontFamily: 'VideoBold'
 };
 const gradientCircle = {
   position: 'absolute',
-  left: '0px',
+  left: '-150px',
   top: '383px',
   width: '1500px',
   height: '1500px',
