@@ -1,5 +1,6 @@
 import { ImageResponse } from 'next/server'
 import { Decode } from './scoreCoding' 
+import '@/app/globals.css'
 
 // Route segment config
 export const runtime = 'edge'

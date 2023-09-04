@@ -15,8 +15,6 @@ const Outer = styled.div`
     max-height: 100vh;
     overflow: hidden;
     width: 100vw;
-    @import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
-    font-family: "Inter", sans-serif;
     padding-top: 100px;
 `;
 const Score = styled.div`
