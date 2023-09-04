@@ -48,7 +48,6 @@ const Score = styled.div`
     text-align: center;
     font-family: video-bold;
 `;
-
 const GradientCircle = styled.div`
     position: fixed;
     left: -50%;

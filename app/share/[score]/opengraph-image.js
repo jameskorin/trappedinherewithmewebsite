@@ -26,36 +26,13 @@ const videoLight = await fetch(
   return new ImageResponse(
     (
       // ImageResponse JSX element
-      <div
-        style={{
-          fontSize: 128,
-          background: '#333333',
-          color: '#FFFFFF',
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-      >
-        <div style={headline}>I scored</div>
-        <div
-        style={{
-          fontWeight: 700,
-          marginTop: '20px',
-          fontFamily: 'VideoBold'
-        }}
-        >{Decode(params.score)}</div>
-        <div style={headline}>Can you beat that?</div>
-        <div
-        style={{
-          position: 'absolute',
-          left: '0px',
-          top: '275px',
-          width: '1200px',
-          height: '1200px',
-          borderRadius: '1200px',
-          background: 'linear-gradient(90deg, #8A2387 14.27%, #E94057 48.78%, #F27121 86.52%)'
-        }}/>
+      <div style={outer}>
+        <div style={content}>
+          <div style={headline}>I scored</div>
+          <div style={score}>{Decode(params.score)}</div>
+          <div style={headline}>Can you beat that?</div>
+        </div>
+        <div style={gradientCircle}/>
       </div>
     ),
     // ImageResponse options
@@ -81,9 +58,37 @@ const videoLight = await fetch(
   )
 }
 
+const outer = {
+  background: '#333333',
+  color: '#FFFFFF',
+  width: '100%',
+  height: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+};
+const content = {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  paddingTop: '64px'
+};
 const headline = {
-  marginTop: '20px',
-  fontSize: '24px',
+  fontSize: '48px',
   textAlign: 'center',
   fontFamily: 'VideoLight'
 }
+const score = {
+  fonstSize: '128px',
+  marginTop: '20px',
+  fontFamily: 'VideoBold'
+};
+const gradientCircle = {
+  position: 'absolute',
+  left: '0px',
+  top: '383px',
+  width: '1500px',
+  height: '1500px',
+  borderRadius: '1500px',
+  background: 'linear-gradient(90deg, #8A2387 14.27%, #E94057 48.78%, #F27121 86.52%)'
+};
+
