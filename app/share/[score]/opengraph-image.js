@@ -5,7 +5,7 @@ import { Decode } from './scoreCoding'
 export const runtime = 'edge'
  
 // Image metadata
-export const alt = 'Trapped In Here With Me'
+export const alt = 'Play Trapped In Here With Me'
 export const size = {
   width: 1200,
   height: 630,
