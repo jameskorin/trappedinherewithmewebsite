@@ -29,8 +29,8 @@ const videoLight = await fetch(
       <div style={outer}>
         <div style={headline}>I scored</div>
         <div style={score}>{Decode(params.score)}</div>
-        <div style={cta}>PLAY NOW</div>
         <div style={gradientCircle}/>
+        <div style={cta}>PLAY NOW</div>
       </div>
     ),
     // ImageResponse options
@@ -77,41 +77,16 @@ const gradientCircle = {
   background: 'linear-gradient(90deg, #8A2387 14.27%, #E94057 48.78%, #F27121 86.52%)'
 };
 const headline = {
-  position: 'absolute',
-  left: 0,
-  right: 0, 
-  marginLeft: 'auto', 
-  marginRight: 'auto', 
-  width: '1200px',
-  minWidth: '1200px',
-  top: '22px',
+  marginTop: '22px',
   fontSize: '48px',
-  fontFamily: 'VideoLight',
-  textAlign: 'center'
+  fontFamily: 'VideoLight'
 }
 const score = {
-  position: 'absolute',
-  left: 0,
-  right: 0, 
-  marginLeft: 'auto', 
-  marginRight: 'auto', 
-  width: '1200px',
-  minWidth: '1200px',
-  top: '45px',
   fontSize: '300px',
   fontFamily: 'VideoBold',
-  textAlign: 'center'
 };
 const cta = {
-  position: 'absolute',
-  left: 0,
-  right: 0, 
-  marginLeft: 'auto', 
-  marginRight: 'auto', 
-  width: '1200px',
-  minWidth: '1200px',
-  bottom: '55px',
+  marginTop: '56px',
   fontSize: '80px',
-  fontFamily: 'VideoLight',
-  textAlign: 'center'
+  fontFamily: 'VideoLight'
 }
