@@ -27,11 +27,9 @@ const videoLight = await fetch(
     (
       // ImageResponse JSX element
       <div style={outer}>
-        <div style={content}>
-          <div style={headline}>I scored</div>
-          <div style={score}>{Decode(params.score)}</div>
-          <div style={headline}>Can you beat that?</div>
-        </div>
+        <div style={headline}>I scored</div>
+        <div style={score}>{Decode(params.score)}</div>
+        <div style={cta}>PLAY NOW</div>
         <div style={gradientCircle}/>
       </div>
     ),
@@ -63,28 +61,22 @@ const outer = {
   color: '#FFFFFF',
   width: '100%',
   height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'flex-start',
-  textAlign: 'center'
-};
-const content = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  textAlign:'center',
-  height: '383px'
 };
 const headline = {
+  position: 'absolute',
+  top: '22px',
   fontSize: '48px',
-  textAlign: 'center',
-  fontFamily: 'VideoLight'
+  fontFamily: 'VideoLight',
+  width: '100%',
+  textAlign: 'center'
 }
 const score = {
-  fontSize: '128px',
-  fontFamily: 'VideoBold'
+  position: 'absolute',
+  top: '45px',
+  fontSize: '300px',
+  fontFamily: 'VideoBold',
+  width: '100%',
+  textAlign: 'center'
 };
 const gradientCircle = {
   position: 'absolute',
@@ -95,4 +87,11 @@ const gradientCircle = {
   borderRadius: '1500px',
   background: 'linear-gradient(90deg, #8A2387 14.27%, #E94057 48.78%, #F27121 86.52%)'
 };
-
+const cta = {
+  position: 'absolute',
+  bottom: '55px',
+  fontSize: '80px',
+  fontFamily: 'VideoLight',
+  width: '100%',
+  textAlign: 'center'
+}
