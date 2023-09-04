@@ -32,6 +32,16 @@ export default async function Image({ params }) {
         }}
       >
         {Decode(params.score)}
+        <div
+        style={{
+          position: 'absolute',
+          left: '0px',
+          top: '275px',
+          width: '1200px',
+          height: '1200px',
+          borderRadius: '1200px',
+          background: 'linear-gradient(90deg, #8A2387 14.27%, #E94057 48.78%, #F27121 86.52%)'
+        }}/>
       </div>
     ),
     // ImageResponse options

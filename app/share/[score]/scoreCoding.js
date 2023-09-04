@@ -8,9 +8,7 @@ export function Encode(score) {
 }
 
 export function Decode(code) {
-    console.log(code);
     let score = fixURI(code);
-    console.log(score);
     for(let i = 0; i < layers; ++i)
         score = atob(score);
     return score;
