@@ -69,18 +69,26 @@ const outer = {
 };
 const headline = {
   position: 'absolute',
+  left: 0,
+  right: 0, 
+  marginLeft: 'auto', 
+  marginRight: 'auto', 
+  width: '1200px',
   top: '22px',
   fontSize: '48px',
   fontFamily: 'VideoLight',
-  width: '1200px',
   textAlign: 'center'
 }
 const score = {
   position: 'absolute',
+  left: 0,
+  right: 0, 
+  marginLeft: 'auto', 
+  marginRight: 'auto', 
+  width: '1200px',
   top: '45px',
   fontSize: '300px',
   fontFamily: 'VideoBold',
-  width: '1200px',
   textAlign: 'center'
 };
 const gradientCircle = {
@@ -94,9 +102,13 @@ const gradientCircle = {
 };
 const cta = {
   position: 'absolute',
+  left: 0,
+  right: 0, 
+  marginLeft: 'auto', 
+  marginRight: 'auto', 
+  width: '1200px',
   bottom: '55px',
   fontSize: '80px',
   fontFamily: 'VideoLight',
-  width: '1200px',
   textAlign: 'center'
 }
