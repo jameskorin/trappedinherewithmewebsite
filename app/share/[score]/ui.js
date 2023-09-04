@@ -75,4 +75,5 @@ const Button = styled.a`
     justify-content: space-between;
     width: 100%;
     max-width: calc(100vw - 80px);
+    max-width: 300px;
 `;
