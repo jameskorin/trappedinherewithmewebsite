@@ -75,7 +75,7 @@ const content = {
   justifyContent: 'center',
   alignItems: 'center',
   textAlign:'center',
-  paddingTop: '20px'
+  height: '383px'
 };
 const headline = {
   fontSize: '48px',
