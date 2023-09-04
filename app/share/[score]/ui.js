@@ -6,7 +6,7 @@ import Head from 'next/head'
 export default function UI({ score }) {
     return <Outer>
         <Head>
-            <title>TRAPPED IN HERE WITH ME</title>
+            <title>Play TRAPPED IN HERE WITH ME</title>
             <meta name="description" content="A lightning fast arcade shooter" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="apple-itunes-app" content="app-id=6449551613"></meta>
