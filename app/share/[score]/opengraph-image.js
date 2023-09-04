@@ -72,7 +72,7 @@ const headline = {
   top: '22px',
   fontSize: '48px',
   fontFamily: 'VideoLight',
-  width: '100%',
+  width: '1200px',
   textAlign: 'center'
 }
 const score = {
@@ -80,7 +80,7 @@ const score = {
   top: '45px',
   fontSize: '300px',
   fontFamily: 'VideoBold',
-  width: '100%',
+  width: '1200px',
   textAlign: 'center'
 };
 const gradientCircle = {
@@ -97,6 +97,6 @@ const cta = {
   bottom: '55px',
   fontSize: '80px',
   fontFamily: 'VideoLight',
-  width: '100%',
+  width: '1200px',
   textAlign: 'center'
 }
