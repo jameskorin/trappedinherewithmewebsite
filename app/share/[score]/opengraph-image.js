@@ -62,16 +62,13 @@ const outer = {
   background: '#333333',
   color: '#FFFFFF',
   width: '100%',
-  height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  textAlign: 'center'
+  height: '100%'
 };
 const content = {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
+  textAlign:'center',
   paddingTop: '0px'
 };
 const headline = {
