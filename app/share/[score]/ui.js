@@ -1,6 +1,6 @@
 'use client'
 
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Head from 'next/head'
 
 export default function UI({ score }) {
@@ -18,9 +18,15 @@ export default function UI({ score }) {
             <Headline>Can you beat that?</Headline>
         </Content>
         <GradientCircle>
-            <Button href="https://apps.apple.com/us/app/trapped-in-here-with-me/id6449551613">
-                Play on iOS! <img src="/app-store-badge.svg"/>
-            </Button>
+            <ButtonContainer>
+                <Button href="https://apps.apple.com/us/app/trapped-in-here-with-me/id6449551613">
+                    Play on iOS! <img src="/app-store-badge.svg"/>
+                </Button>
+                <Button href="https://store.steampowered.com/app/2584310/Trapped_In_Here_With_Me/"
+                margin={'20px 0px 0px 0px'}>
+                    Wishlist on Steam! <SteamLogo src="/steam-grey.svg"/>
+                </Button>
+            </ButtonContainer>
         </GradientCircle>
     </Outer>;
 }
@@ -61,18 +67,32 @@ const GradientCircle = styled.div`
     justify-content: flex-start;
     align-items: center;
 `;
+const ButtonContainer = styled.div`
+    margin-top: calc(calc(calc(100vh - calc(100vh - 300px))/2) - 60px);
+`;
 const Button = styled.a`
     font-family: video-light;
     background: #FFFFFF;
     color: #333333;
     border-radius: 100px;
     padding: 10px 20px;
-    margin-top: calc(calc(calc(100vh - calc(100vh - 300px))/2) - 20px);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     max-width: calc(100vw - 80px);
-    max-width: 300px;
+    max-width: 350px;
+
+    ${props => props.margin && css`
+        margin: ${props.margin};
+    `}
+
+    img {
+        margin-left: 20px;
+    }
+`;
+const SteamLogo = styled.img`
+    width: 40px;
+    height: 40px;
 `;

@@ -84,9 +84,11 @@ export const CTA = styled.a`
     border-radius: 100px;
     cursor: pointer;
     z-index: 10;
-    margin: -20px 0px 0px 0px;
     min-width: 270px;
     text-align: center;
+    ${props => props.margin && css`
+        margin: ${props.margin};
+    `}
 `;
 export const BGContainer = styled.div`
     width: 100vw;
@@ -95,7 +97,8 @@ export const BGContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 40px;
 `;
 export const BGVideo = styled.video`
     position: absolute;

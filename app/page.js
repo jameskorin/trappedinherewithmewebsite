@@ -1,15 +1,15 @@
 'use client'
+import React from 'react'
 import Head from 'next/head'
 import {
-  Outer, 
-  Body,
+  Outer,
   Link,
-  CTA,
   BGContainer,
   FadeIn
 } from './styledComponents'
 import Image from 'next/image'
 import MuxPlayer from '@mux/mux-player-react'
+import styled, { css } from 'styled-components'
 
 export default function Home() {
   return (
@@ -34,8 +34,11 @@ export default function Home() {
         loop
         playbackId="INOrTjGATiaMvXWRcPmkOLM01TrDNrCj7d9WpEKVfP4s"
         style={{
-          position: 'absolute',
-          maxWidth: 'min(571px, 100vw)',
+          position: 'fixed',
+          left: '-50%',
+          top: 'calc(100vh - 50%)',
+          width: '200vw',
+          borderRadius: '100vw',
           aspectRatio: 'auto 1 / 1',
           height: 'auto',
           zIndex: '1',
@@ -49,14 +52,15 @@ export default function Home() {
         <FadeIn/>
 
         {/* CTA for beta download */}
-        <CTA href="https://apps.apple.com/us/app/trapped-in-here-with-me/id6449551613">Play on iOS!</CTA>
+        <Button href="https://apps.apple.com/us/app/trapped-in-here-with-me/id6449551613">
+          Play on iOS! <img src="/app-store-badge-white.svg"/>
+        </Button>
+        <Button href="https://store.steampowered.com/app/2584310/Trapped_In_Here_With_Me/"
+        margin={'20px 0px 0px 0px'}>
+          Wishlist on Steam! <SteamLogo src="/steam-white.svg"/>
+        </Button>
 
-        {/* Credits */}
-        <Body bg>Game by <Link href='https://jameskor.in'>James Korin</Link></Body>
-        <Body bg>Music and sound by <Link href='https://www.instagram.com/actionsmackson/'>Jackson Roe</Link></Body>
-        <Body bg>UI animations by <Link href='https://www.davidleefiddler.com/'>D1337</Link></Body>
-        <Body bg>Arcade cabinet by <Link href='https://www.linkedin.com/in/jonbblair/'>Jonathan Blair</Link></Body>
-
+        <CreditsButton href='/credits'>Credits</CreditsButton>
       </BGContainer>
     </Outer>
   )
@@ -69,4 +73,43 @@ const imageStyle = {
   height: 'auto',
   margin: '0px 0px 0px -5px',
   zIndex: '10'
-}
+};
+const Button = styled.a`
+    font-family: video-light;
+    background: #333333;
+    color: #FFFFFF;
+    border-radius: 100px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: calc(100vw - 80px);
+    max-width: 300px;
+    z-index: 100;
+
+    ${props => props.margin && css`
+        margin: ${props.margin};
+    `}
+
+    img {
+        margin-left: 20px;
+    }
+`;
+const SteamLogo = styled.img`
+    width: 40px;
+    height: 40px;
+`;
+const CreditsButton = styled.a`
+    cursor: pointer;
+    color: #333333;
+    font-family: video-light;
+    font-size: 18px;
+    margin-top: 20px;
+    z-index: 100;
+`;
+const CreditsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
