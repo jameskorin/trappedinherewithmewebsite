@@ -3,15 +3,16 @@ import React from 'react'
 import Head from 'next/head'
 import {
   Outer,
-  Link,
   BGContainer,
   FadeIn
 } from './styledComponents'
 import Image from 'next/image'
 import MuxPlayer from '@mux/mux-player-react'
 import styled, { css } from 'styled-components'
+import './globals.css'
 
 export default function Home() {
+
   return (
     <Outer>
       <Head>
@@ -28,33 +29,12 @@ export default function Home() {
 
         {/* Gameplay */}
         <MuxPlayer 
+        className='mux-home-page'
         streamType="on-demand"
         muted
         autoPlay="muted"
         loop
-        playbackId="INOrTjGATiaMvXWRcPmkOLM01TrDNrCj7d9WpEKVfP4s"
-        style={window === undefined ? {} : (window.innerWidth >= 550 ? {
-          position: 'fixed',
-          left: 'calc((100vw - 550px) / 2)',
-          top: 'calc(100vh - 50%)',
-          width: '550px',
-          maxWidth: '550px',
-          borderRadius: '100vw',
-          aspectRatio: 'auto 1 / 1',
-          height: 'auto',
-          zIndex: '1',
-          objectFit: 'cover'
-        } : {
-          position: 'fixed',
-          left: '-50%',
-          top: 'calc(100vh - 50%)',
-          width: '200vw',
-          borderRadius: '100vw',
-          aspectRatio: 'auto 1 / 1',
-          height: 'auto',
-          zIndex: '1',
-          objectFit: 'cover'
-        })}/>
+        playbackId="INOrTjGATiaMvXWRcPmkOLM01TrDNrCj7d9WpEKVfP4s"/>
 
         {/* 
           White background over the video that fades in after a second. 

@@ -182,3 +182,21 @@ mxp-dialog {
   font-family: 'video-cond-bold';
   src: url('/fonts/VideoCond-Bold.ttf');
 }
+
+.mux-home-page {
+  position: fixed;
+  left: -50%;
+  top: calc(100vh - 50%);
+  width: 200vw;
+  border-radius: 100vw;
+  aspect-ratio: auto 1 / 1;
+  height: auto;
+  z-index: 1;
+  object-fit: cover;
+
+  @media(min-width: 550px) {
+    left: calc((100vw - 550px) / 2);
+    width: 550px;
+    max-width: 550px;  
+  }
+}
