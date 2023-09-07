@@ -188,7 +188,7 @@ mxp-dialog {
   left: -50%;
   top: calc(100vh - 50%);
   width: 200vw;
-  border-radius: 100vw;
+  
   aspect-ratio: auto 1 / 1;
   height: auto;
   z-index: 1;
