@@ -37,7 +37,7 @@ export default function Home() {
         playbackId="INOrTjGATiaMvXWRcPmkOLM01TrDNrCj7d9WpEKVfP4s"/>
 
         {/* White strip to cover the top edge of the mux player to cheese our way out of the border bug on mobile */}
-        <BorderBugHider/>
+        {/* <BorderBugHider/> */}
 
         {/* 
           White background over the video that fades in after a second. 
