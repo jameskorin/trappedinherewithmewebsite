@@ -109,10 +109,10 @@ const CreditsContainer = styled.div`
 `;
 const BorderBugHider = styled.div`
     background: #FFFFFF;
-    height: 20px;
+    height: 50px;
     width: 100vw;
     position: fixed;
     left: 0px;
     top: calc(calc(100vh - 50%) - 5px);
-    z-index: 20;
+    z-index: 50;
 `;
