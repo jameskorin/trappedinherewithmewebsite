@@ -36,6 +36,9 @@ export default function Home() {
         loop
         playbackId="INOrTjGATiaMvXWRcPmkOLM01TrDNrCj7d9WpEKVfP4s"/>
 
+        {/* White strip to cover the top edge of the mux player to cheese our way out of the border bug on mobile */}
+        <BorderBugHider/>
+
         {/* 
           White background over the video that fades in after a second. 
           This obscures first frame wonkiness with the video player that I failed to fix with css.
@@ -103,4 +106,13 @@ const CreditsButton = styled.a`
 const CreditsContainer = styled.div`
     display: flex;
     flex-direction: column;
+`;
+const BorderBugHider = styled.div`
+    background: #FFFFFF;
+    height: 10px;
+    width: 100vw;
+    position: fixed;
+    left: 0px;
+    top: calc(calc(100vh - 50%) - 5px);
+    z-index: 2;
 `;
