@@ -51,7 +51,7 @@ export default function Home() {
           Wishlist on Steam! <SteamLogo src="/steam-white.svg"/>
         </Button> */}
         <PlatformList>
-          <div>Play now!</div>
+          <PlayNow>Play now!</PlayNow>
           <a><img src="/app-store-badge-white.svg"/></a>
           <a><SteamLogo src="/steam-grey.svg"/></a>
         </PlatformList>
@@ -89,4 +89,7 @@ const PlatformList = styled.div`
     justify-content: space-evenly;
     width: 571px;
     max-width: 400px;
+`;
+const PlayNow = styled.div`
+  font-family: video-light;
 `;
