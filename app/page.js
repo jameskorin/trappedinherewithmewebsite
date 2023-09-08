@@ -52,8 +52,8 @@ export default function Home() {
         </Button> */}
         <PlatformList>
           <PlayNow>Play now!</PlayNow>
-          <a><img src="/app-store-badge-white.svg"/></a>
-          <a><SteamLogo src="/steam-grey.svg"/></a>
+          <a href="https://apps.apple.com/us/app/trapped-in-here-with-me/id6449551613"><img src="/app-store-badge-white.svg"/></a>
+          <a href="https://store.steampowered.com/app/2584310/Trapped_In_Here_With_Me/"><SteamLogo src="/steam-grey.svg"/></a>
         </PlatformList>
 
         <CreditsButton href='/credits'>Credits</CreditsButton>
@@ -89,6 +89,11 @@ const PlatformList = styled.div`
     justify-content: space-evenly;
     width: 571px;
     max-width: 400px;
+    z-index: 100;
+
+    a {
+      cursor: pointer;
+    }
 `;
 const PlayNow = styled.div`
   font-family: video-light;
