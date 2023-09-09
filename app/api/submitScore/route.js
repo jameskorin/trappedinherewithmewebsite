@@ -13,10 +13,9 @@ const postgres = {
 }
 
 export async function POST(req, res) {
-    const { score, steam_id, username, token } = req.body;
+    const { score, steam_id, username, token } = await req.json();
     const new_score = parseInt(score);
     console.log({score: new_score, steam_id: steam_id, username: username, token: token});
-    return NextResponse.send('done');
 
     // Validate session
     const path = 'https://partner.steam-api.com/ISteamUserAuth/AuthenticateUserTicket/v1/';
