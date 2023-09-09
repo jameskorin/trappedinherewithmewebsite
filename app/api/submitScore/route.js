@@ -12,8 +12,8 @@ const postgres = {
   port: 5432,
 }
 
-export async function POST(req, res) {
-    const { score, steam_id, username, token } = await req.json();
+export async function POST(req) {
+    const { score, steam_id, username, token } = paramsToJSON(req.url);
     const new_score = parseInt(score);
     console.log({score: new_score, steam_id: steam_id, username: username, token: token});
 
@@ -31,7 +31,7 @@ export async function POST(req, res) {
     console.log(id);
 
     if(steam_id !== id) {
-        return res.status(400).send({error: 'invalid auth session'});
+        return NextResponse.json({error: 'invalid auth session'});
     } else {
         console.log('id matches ticket');
     }
@@ -51,7 +51,7 @@ export async function POST(req, res) {
             INSERT INTO scores (steam_id, high_score, username, high_score_time)
             VALUES ('${steam_id}', ${new_score}, '${username}', to_timestamp(${Date.now()} / 1000.0));        
         `);
-        return res.send('new row');
+        return NextResponse.json({message:'new row'});
     }
 
     // If the user's new score is higher than that, update their score
@@ -65,6 +65,16 @@ export async function POST(req, res) {
             WHERE steam_id = '${steam_id}';        
         `);
     }
-    // return res.send('done');
-    return NextResponse.send('done');
+    return NextResponse.json({message:'done'});
+}
+
+function paramsToJSON(url) {
+    const search = url.split('?')[1];
+    let paramPairs = search.split('&');
+    let obj = {};
+    for(let i = 0; i < paramPairs.length; ++i) {
+        const a = paramPairs[i].split('=');
+        obj[a[0]] = a[1];
+    }
+    return obj;
 }
