@@ -3,6 +3,7 @@ import { Pool } from 'pg'
 import dotenv from 'dotenv'
 dotenv.config();
 import axios from 'axios'
+import paramsToJSON from '@/app/util/paramsToJSON'
 
 const postgres = {
   user: 'postgres',
@@ -66,15 +67,4 @@ export async function POST(req) {
         `);
     }
     return NextResponse.json({message:'done'});
-}
-
-function paramsToJSON(url) {
-    const search = url.split('?')[1];
-    let paramPairs = search.split('&');
-    let obj = {};
-    for(let i = 0; i < paramPairs.length; ++i) {
-        const a = paramPairs[i].split('=');
-        obj[a[0]] = a[1];
-    }
-    return obj;
 }
