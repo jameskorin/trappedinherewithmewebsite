@@ -18,15 +18,11 @@ export default function UI({ score }) {
             <Headline>Can you beat that?</Headline>
         </Content>
         <GradientCircle>
-            <ButtonContainer>
-                <Button href="https://apps.apple.com/us/app/trapped-in-here-with-me/id6449551613">
-                    Play on iOS! <img src="/app-store-badge.svg"/>
-                </Button>
-                <Button href="https://store.steampowered.com/app/2584310/Trapped_In_Here_With_Me/"
-                margin={'20px 0px 0px 0px'}>
-                    Wishlist on Steam! <SteamLogo src="/steam-grey.svg"/>
-                </Button>
-            </ButtonContainer>
+        <PlatformList>
+          <PlayNow>Play now!</PlayNow>
+          <a href="https://apps.apple.com/us/app/trapped-in-here-with-me/id6449551613"><img src="/app-store-badge-white.svg"/></a>
+          <a href="https://store.steampowered.com/app/2584310/Trapped_In_Here_With_Me/"><SteamLogo src="/steam-grey.svg"/></a>
+        </PlatformList>
         </GradientCircle>
     </Outer>;
 }
@@ -66,33 +62,29 @@ const GradientCircle = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-`;
-const ButtonContainer = styled.div`
-    margin-top: calc(calc(calc(100vh - calc(100vh - 300px))/2) - 60px);
-`;
-const Button = styled.a`
-    font-family: video-light;
-    background: #FFFFFF;
-    color: #333333;
-    border-radius: 100px;
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: calc(100vw - 80px);
-    max-width: 350px;
-
-    ${props => props.margin && css`
-        margin: ${props.margin};
-    `}
-
-    img {
-        margin-left: 20px;
-    }
+    padding-top: 20%;
 `;
 const SteamLogo = styled.img`
     width: 40px;
     height: 40px;
+`;
+
+const PlatformList = styled.div`
+    position: fixed;
+    top: calc(100vh - 100px);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 571px;
+    max-width: 400px;
+    z-index: 100;
+
+    a {
+      cursor: pointer;
+    }
+`;
+const PlayNow = styled.div`
+  font-family: video-light;
 `;

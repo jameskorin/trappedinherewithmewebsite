@@ -43,13 +43,6 @@ export default function Home() {
         <FadeIn/>
 
         {/* CTA for beta download */}
-        {/* <Button href="https://apps.apple.com/us/app/trapped-in-here-with-me/id6449551613">
-          Play on iOS! <img src="/app-store-badge-white.svg"/>
-        </Button>
-        <Button href="https://store.steampowered.com/app/2584310/Trapped_In_Here_With_Me/"
-        margin={'20px 0px 0px 0px'}>
-          Wishlist on Steam! <SteamLogo src="/steam-white.svg"/>
-        </Button> */}
         <PlatformList>
           <PlayNow>Play now!</PlayNow>
           <a href="https://apps.apple.com/us/app/trapped-in-here-with-me/id6449551613"><img src="/app-store-badge-white.svg"/></a>
