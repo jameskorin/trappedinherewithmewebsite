@@ -58,7 +58,7 @@ export async function POST(req) {
     };
     const pool = new Pool(postgres);
     const r = await pool.query(query);
-    let rows = r.rows.sort((a,b) => parseInt(a.high_score) > parseInt(b.high_score) ? 1:-1);
+    let rows = r.rows.sort((a,b) => parseInt(a.high_score) > parseInt(b.high_score) ? -1:1);
     for(let i = 0; i < rows.length; ++i)
         rows[i].rank = i + 1;
 
