@@ -50,7 +50,7 @@ export async function POST(req) {
     if(r.rows.length === 0) {
         await pool.query(`
             INSERT INTO scores (steam_id, high_score, username, high_score_time)
-            VALUES ('${steam_id}', ${new_score}, '${username}', to_timestamp(${Date.now()} / 1000.0));        
+            VALUES ('${steam_id}', ${new_score}, '${decodeURI(username)}', to_timestamp(${Date.now()} / 1000.0));        
         `);
         return NextResponse.json({message:'new row'});
     }
@@ -59,10 +59,10 @@ export async function POST(req) {
     // If their username is updated, update that as well
     const old_score = (r.rows[0].high_score);
     const old_name = r.rows[0].username;
-    if(new_score > old_score || old_name !== username) {
+    if(new_score > old_score || old_name !== decodeURI(username)) {
         await pool.query(`
             UPDATE scores
-            SET high_score = ${Math.max(old_score, new_score)}, username = '${username}' ${new_score > old_score ? `, high_score_time = to_timestamp(${Date.now()} / 1000.0)`:``}
+            SET high_score = ${Math.max(old_score, new_score)}, username = '${decodeURI(username)}' ${new_score > old_score ? `, high_score_time = to_timestamp(${Date.now()} / 1000.0)`:``}
             WHERE steam_id = '${steam_id}';        
         `);
     }
