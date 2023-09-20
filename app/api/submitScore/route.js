@@ -28,7 +28,7 @@ export async function POST(req) {
             identity: 'gameclient'
         }
     });
-    const id = v.data.response.params.steamid
+    const id = v.data.response.params.steamid;
     console.log(id);
 
     if(steam_id !== id) {
