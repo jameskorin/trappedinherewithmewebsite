@@ -22,7 +22,7 @@ export async function POST(req) {
     const path = 'https://partner.steam-api.com/ISteamUserAuth/AuthenticateUserTicket/v1/';
     const v = await axios.get(path, { 
         params: {
-            key: "F3A995C29FBE9EAA5618C740E8E002E3",
+            key: process.env.STEAM_WEB_API_KEY,
             appid: 2584310,
             ticket: token,
             identity: 'gameclient'
