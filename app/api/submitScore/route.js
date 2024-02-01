@@ -4,14 +4,7 @@ import dotenv from 'dotenv'
 dotenv.config();
 import axios from 'axios'
 import paramsToJSON from '@/app/util/paramsToJSON'
-
-const postgres = {
-  user: 'postgres',
-  host: 'db.ufzkwbydugnwpjwnjpdn.supabase.co',
-  database: 'postgres',
-  password: process.env.POSTGRES_PASSWORD,
-  port: 5432,
-}
+import { postgres } from '@/app/util/postgres'
 
 export async function POST(req) {
     const { score, steam_id, username, token } = paramsToJSON(req.url);
